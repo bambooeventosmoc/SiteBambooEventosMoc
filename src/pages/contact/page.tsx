@@ -109,7 +109,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-base md:text-xl text-[#0d3d2f] mb-1 md:mb-2">E-mail</h3>
-                      <p className="text-sm md:text-lg text-gray-600">bambooeventosmoc@gamil.com</p>
+                      <p className="text-sm md:text-lg text-gray-600">bambooeventosmoc@gmail.com</p>
                     </div>
                   </div>
 

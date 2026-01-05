@@ -21,7 +21,7 @@ export default function HeroSection() {
           alt="Bamboo Eventos"
           className="w-full h-full object-cover object-top"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0d3d2f]/95 to-[#0d3d2f]/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0d3d2f]/70 to-[#0d3d2f]/50"></div>
       </div>
 
       {/* Content */}
@@ -33,32 +33,45 @@ export default function HeroSection() {
           <p className="text-base sm:text-lg md:text-xl lg:text-xl text-gray-200 mb-5 md:mb-10 leading-relaxed">
             Espaço para festas, confraternizações, eventos sociais e corporativos. Tudo com  excelência, criatividade e dedicação em cada detalhe.
           </p>
-          <div className="flex flex-col sm:flex-row gap-2 md:gap-3">
-            <button 
-              onClick={scrollToLocation}
-              className="bg-[#d4af37] text-[#0d3d2f] px-3 py-2 md:px-6 md:py-3 rounded-full font-semibold text-center transition-all hover:bg-[#c4a137] hover:scale-105 text-xs md:text-base whitespace-nowrap cursor-pointer flex items-center justify-center gap-2"
-            >
-              <i className="ri-map-pin-line text-base md:text-xl w-4 h-4 flex items-center justify-center"></i>
-              Nossa Localização
-            </button>
-            <a 
-              href="https://wa.me/5538977585355" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border-2 border-[#d4af37] text-[#d4af37] px-3 py-2 md:px-6 md:py-3 rounded-full font-semibold text-center transition-all hover:bg-[#d4af37] hover:text-[#0d3d2f] flex items-center justify-center gap-2 text-xs md:text-base whitespace-nowrap cursor-pointer"
-            >
-              <i className="ri-whatsapp-line text-base md:text-xl w-4 h-4 flex items-center justify-center"></i>
-              Fale no WhatsApp
-            </a>
-            <a 
-              href="https://www.instagram.com/bambooeventos.moc/" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border-2 border-[#d4af37] text-[#d4af37] px-3 py-2 md:px-6 md:py-3 rounded-full font-semibold text-center transition-all hover:bg-[#d4af37] hover:text-[#0d3d2f] flex items-center justify-center gap-2 text-xs md:text-base whitespace-nowrap cursor-pointer"
-            >
-              <i className="ri-instagram-line text-base md:text-xl w-4 h-4 flex items-center justify-center"></i>
-              Instagram
-            </a>
+          <div className="flex flex-col gap-2 md:gap-3">
+            <div className="flex flex-col sm:flex-row gap-2 md:gap-3">
+              <button 
+                onClick={scrollToLocation}
+                className="bg-[#d4af37] text-[#0d3d2f] px-3 py-2 md:px-6 md:py-3 rounded-full font-semibold text-center transition-all hover:bg-[#c4a137] hover:scale-105 text-xs md:text-base whitespace-nowrap cursor-pointer flex items-center justify-center gap-2"
+              >
+                <i className="ri-map-pin-line text-base md:text-xl w-4 h-4 flex items-center justify-center"></i>
+                Nossa Localização
+              </button>
+              <a 
+                href="https://wa.me/5538977585355" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-[#d4af37] text-[#d4af37] px-3 py-2 md:px-6 md:py-3 rounded-full font-semibold text-center transition-all hover:bg-[#d4af37] hover:text-[#0d3d2f] flex items-center justify-center gap-2 text-xs md:text-base whitespace-nowrap cursor-pointer"
+              >
+                <i className="ri-whatsapp-line text-base md:text-xl w-4 h-4 flex items-center justify-center"></i>
+                Fale no WhatsApp
+              </a>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-2 md:gap-3">
+              <a 
+                href="https://www.facebook.com/bambooeventos.moc/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-[#d4af37] text-[#d4af37] px-3 py-2 md:px-6 md:py-3 rounded-full font-semibold text-center transition-all hover:bg-[#d4af37] hover:text-[#0d3d2f] flex items-center justify-center gap-2 text-xs md:text-base whitespace-nowrap cursor-pointer"
+              >
+                <i className="ri-facebook-fill text-base md:text-xl w-4 h-4 flex items-center justify-center"></i>
+                Facebook
+              </a>
+              <a 
+                href="https://www.instagram.com/bambooeventos.moc/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-[#d4af37] text-[#d4af37] px-3 py-2 md:px-6 md:py-3 rounded-full font-semibold text-center transition-all hover:bg-[#d4af37] hover:text-[#0d3d2f] flex items-center justify-center gap-2 text-xs md:text-base whitespace-nowrap cursor-pointer"
+              >
+                <i className="ri-instagram-fill text-base md:text-xl w-4 h-4 flex items-center justify-center"></i>
+                Instagram
+              </a>
+            </div>
           </div>
         </div>
       </div>
