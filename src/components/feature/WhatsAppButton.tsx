@@ -1,14 +1,5 @@
-type WhatsAppButtonProps = {
-  phoneNumber: string;
-  message?: string;
-};
-
-export default function WhatsAppButton({
-  phoneNumber,
-  message = "",
-}: WhatsAppButtonProps) {
-  const encodedMessage = encodeURIComponent(message);
-  const whatsappUrl = `https://wa.me/${phoneNumber}${encodedMessage ? `?text=${encodedMessage}` : ""}`;
+export default function WhatsAppButton() {
+  const whatsappUrl = `https://wa.me/5538999758535`;
 
   return (
     <a

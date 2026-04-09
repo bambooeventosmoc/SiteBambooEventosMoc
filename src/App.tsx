@@ -11,7 +11,7 @@ function App() {
       <BrowserRouter basename={__BASE_PATH__}>
         <ScrollToTop />
         <AppRoutes />
-        <WhatsAppButton phoneNumber="5538999758535" />
+        <WhatsAppButton />
       </BrowserRouter>
     </I18nextProvider>
   );
