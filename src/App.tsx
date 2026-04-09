@@ -1,10 +1,9 @@
-
 import { BrowserRouter } from "react-router-dom";
 import { AppRoutes } from "./router";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
 import ScrollToTop from "./components/feature/ScrollToTop";
-
+import WhatsAppButton from "./components/feature/WhatsAppButton";
 
 function App() {
   return (
@@ -12,6 +11,7 @@ function App() {
       <BrowserRouter basename={__BASE_PATH__}>
         <ScrollToTop />
         <AppRoutes />
+        <WhatsAppButton phoneNumber="5538999758535" />
       </BrowserRouter>
     </I18nextProvider>
   );
