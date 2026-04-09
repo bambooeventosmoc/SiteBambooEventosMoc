@@ -17,7 +17,7 @@ export default function Header() {
             <img
               src={logo}
               alt="Bamboo Eventos"
-              className="h-20 md:h-28 w-auto"
+              className="h-24 sm:h-28 md:h-32 w-auto"
             />
           </Link>
 
