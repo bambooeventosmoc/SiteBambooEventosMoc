@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../../public/d52b4ba4a12fc6d9511bce3e4066d533-Photoroom.png";
+import logo from "../public/d52b4ba4a12fc6d9511bce3e4066d533-Photoroom.png";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

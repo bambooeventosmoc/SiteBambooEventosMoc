@@ -1,4 +1,4 @@
-import whatsappFloatIcon from "../../public/whatsapp-float-icon.png";
+import whatsappFloatIcon from "../public/whatsapp-float-icon.png";
 
 export default function WhatsAppButton() {
   const whatsappUrl = `https://wa.me/5538999758535`;

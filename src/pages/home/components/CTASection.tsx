@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function CTASection() {
+  const navigate = useNavigate();
   const scrollToLocation = () => {
-    window.REACT_APP_NAVIGATE("/contatos");
+    navigate("/contatos");
     setTimeout(() => {
       const locationSection = document.getElementById("nossa-localizacao");
       if (locationSection) {
