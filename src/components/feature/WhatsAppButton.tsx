@@ -16,7 +16,7 @@ export default function WhatsAppButton() {
         src={whatsappFloatIcon}
         alt=""
         aria-hidden="true"
-        className="h-14 w-14 sm:h-20 sm:w-20 md:h-24 md:w-24 object-contain"
+        className="h-20 w-20 sm:h-20 sm:w-20 md:h-24 md:w-24 object-contain"
       />
     </a>
   );

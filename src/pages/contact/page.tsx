@@ -1,30 +1,36 @@
-import { useState } from 'react';
-import Header from '../../components/feature/Header';
-import Footer from '../../components/feature/Footer';
+import { useState } from "react";
+import Header from "../../components/feature/Header";
+import Footer from "../../components/feature/Footer";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    nome: '',
-    email: '',
-    telefone: '',
-    tipoEvento: '',
-    data: '',
-    convidados: '',
-    mensagem: ''
+    nome: "",
+    email: "",
+    telefone: "",
+    tipoEvento: "",
+    data: "",
+    convidados: "",
+    mensagem: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setSubmitStatus('idle');
+    setSubmitStatus("idle");
 
     try {
       const formBody = new URLSearchParams();
@@ -32,30 +38,33 @@ export default function ContactPage() {
         formBody.append(key, value);
       });
 
-      const response = await fetch('https://readdy.ai/api/form/d4j0h5b3rief4cfea8g0', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
+      const response = await fetch(
+        "https://readdy.ai/api/form/d4j0h5b3rief4cfea8g0",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: formBody.toString(),
         },
-        body: formBody.toString()
-      });
+      );
 
       if (response.ok) {
-        setSubmitStatus('success');
+        setSubmitStatus("success");
         setFormData({
-          nome: '',
-          email: '',
-          telefone: '',
-          tipoEvento: '',
-          data: '',
-          convidados: '',
-          mensagem: ''
+          nome: "",
+          email: "",
+          telefone: "",
+          tipoEvento: "",
+          data: "",
+          convidados: "",
+          mensagem: "",
         });
       } else {
-        setSubmitStatus('error');
+        setSubmitStatus("error");
       }
     } catch (error) {
-      setSubmitStatus('error');
+      setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
     }
@@ -73,7 +82,8 @@ export default function ContactPage() {
                 Entre em <span className="text-[#d4af37]">Contato</span>
               </h1>
               <p className="text-sm md:text-xl text-gray-300">
-                Estamos prontos para transformar seu evento em uma experiência inesquecível. Fale conosco!
+                Estamos prontos para transformar seu evento em uma experiência
+                inesquecível. Fale conosco!
               </p>
             </div>
           </div>
@@ -89,7 +99,9 @@ export default function ContactPage() {
                   Fale Conosco
                 </h2>
                 <p className="text-base md:text-lg text-gray-600 mb-4 md:mb-8 leading-relaxed">
-                  Nossa equipe está pronta para atender você e criar o evento dos seus sonhos. Entre em contato através dos canais abaixo ou preencha o formulário.
+                  Nossa equipe está pronta para atender você e criar o evento
+                  dos seus sonhos. Entre em contato através dos canais abaixo ou
+                  preencha o formulário.
                 </p>
 
                 <div className="space-y-4 md:space-y-6 mb-6 md:mb-8">
@@ -98,8 +110,12 @@ export default function ContactPage() {
                       <i className="ri-phone-line text-2xl md:text-3xl text-[#0d3d2f]"></i>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-base md:text-xl text-[#0d3d2f] mb-1 md:mb-2">Telefone</h3>
-                      <p className="text-sm md:text-lg text-gray-600">(38) 999758535</p>
+                      <h3 className="font-semibold text-base md:text-xl text-[#0d3d2f] mb-1 md:mb-2">
+                        Telefone
+                      </h3>
+                      <p className="text-sm md:text-lg text-gray-600">
+                        (38) 999758535
+                      </p>
                     </div>
                   </div>
 
@@ -108,8 +124,12 @@ export default function ContactPage() {
                       <i className="ri-mail-line text-2xl md:text-3xl text-[#0d3d2f]"></i>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-base md:text-xl text-[#0d3d2f] mb-1 md:mb-2">E-mail</h3>
-                      <p className="text-sm md:text-lg text-gray-600">bambooeventosmoc@gmail.com</p>
+                      <h3 className="font-semibold text-base md:text-xl text-[#0d3d2f] mb-1 md:mb-2">
+                        E-mail
+                      </h3>
+                      <p className="text-sm md:text-lg text-gray-600">
+                        bambooeventosmoc@gmail.com
+                      </p>
                     </div>
                   </div>
 
@@ -118,38 +138,46 @@ export default function ContactPage() {
                       <i className="ri-time-line text-2xl md:text-3xl text-[#0d3d2f]"></i>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-base md:text-xl text-[#0d3d2f] mb-1 md:mb-2">Horário de Atendimento</h3>
-                      <p className="text-sm md:text-lg text-gray-600">Segunda a Sexta: 9h às 18h</p>
-                      <p className="text-sm md:text-lg text-gray-600">Sábado: 9h às 13h</p>
+                      <h3 className="font-semibold text-base md:text-xl text-[#0d3d2f] mb-1 md:mb-2">
+                        Horário de Atendimento
+                      </h3>
+                      <p className="text-sm md:text-lg text-gray-600">
+                        Segunda a Sexta: 9h às 18h
+                      </p>
+                      <p className="text-sm md:text-lg text-gray-600">
+                        Sábado: 9h às 13h
+                      </p>
                     </div>
                   </div>
                 </div>
 
                 {/* Redes Sociais */}
                 <div>
-                  <h3 className="font-semibold text-base md:text-xl text-[#0d3d2f] mb-3 md:mb-4">Siga-nos nas Redes Sociais</h3>
+                  <h3 className="font-semibold text-base md:text-xl text-[#0d3d2f] mb-3 md:mb-4">
+                    Siga-nos nas Redes Sociais
+                  </h3>
                   <div className="flex gap-3 md:gap-4">
-                    <a 
-                      href="https://www.facebook.com/bambooeventos.moc/" 
-                      target="_blank" 
+                    <a
+                      href="https://www.facebook.com/bambooeventos.moc/"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-[#0d3d2f] rounded-full hover:bg-[#d4af37] transition-colors cursor-pointer"
                       aria-label="Facebook"
                     >
                       <i className="ri-facebook-fill text-xl md:text-2xl text-white"></i>
                     </a>
-                    <a 
-                      href="https://www.instagram.com/bambooeventos.moc/" 
-                      target="_blank" 
+                    <a
+                      href="https://www.instagram.com/bambooeventos.moc/"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-[#0d3d2f] rounded-full hover:bg-[#d4af37] transition-colors cursor-pointer"
                       aria-label="Instagram"
                     >
                       <i className="ri-instagram-fill text-xl md:text-2xl text-white"></i>
                     </a>
-                    <a 
-                      href="https://wa.me/5538977585355" 
-                      target="_blank" 
+                    <a
+                      href="https://wa.me/5538999758535"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-[#25D366] rounded-full hover:bg-[#1fb855] transition-colors cursor-pointer"
                       aria-label="WhatsApp"
