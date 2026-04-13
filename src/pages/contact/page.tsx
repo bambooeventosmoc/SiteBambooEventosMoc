@@ -3,6 +3,11 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 export default function ContactPage() {
+  const phoneNumber = "5538999758535";
+  const mensagemWhatsApp = encodeURIComponent(
+    "Quero mais informações sobre o Bamboo Eventos",
+  );
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${mensagemWhatsApp}`;
   const [formData, setFormData] = useState({
     nome: "",
     email: "",
@@ -176,7 +181,7 @@ export default function ContactPage() {
                       <i className="ri-instagram-fill text-xl md:text-2xl text-white"></i>
                     </a>
                     <a
-                      href="https://wa.me/5538999758535"
+                      href={whatsappLink}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-[#25D366] rounded-full hover:bg-[#1fb855] transition-colors cursor-pointer"
