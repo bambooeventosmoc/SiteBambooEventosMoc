@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function HeroSection() {
+  const navigate = useNavigate();
   const scrollToLocation = () => {
-    window.REACT_APP_NAVIGATE("/contatos");
+    navigate("/contatos");
     setTimeout(() => {
       const locationSection = document.getElementById("nossa-localizacao");
       if (locationSection) {
@@ -10,7 +11,11 @@ export default function HeroSection() {
       }
     }, 100);
   };
-
+  const phoneNumber = "5538999758535";
+  const mensagemWhatsApp = encodeURIComponent(
+    "Quero mais informações sobre o Bamboo Eventos",
+  );
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${mensagemWhatsApp}`;
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#0d3d2f] to-[#1a5a47]">
       {/* Background Image */}
@@ -44,7 +49,7 @@ export default function HeroSection() {
                 Nossa Localização
               </button>
               <a
-                href="https://wa.me/5538999758535"
+                href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border-2 border-[#d4af37] text-[#d4af37] px-3 py-2 md:px-6 md:py-3 rounded-full font-semibold text-center transition-all hover:bg-[#d4af37] hover:text-[#0d3d2f] flex items-center justify-center gap-2 text-xs md:text-base whitespace-nowrap cursor-pointer"

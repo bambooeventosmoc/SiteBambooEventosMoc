@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function CTASection() {
+  const navigate = useNavigate();
   const scrollToLocation = () => {
-    window.REACT_APP_NAVIGATE("/contatos");
+    navigate("/contatos");
     setTimeout(() => {
       const locationSection = document.getElementById("nossa-localizacao");
       if (locationSection) {
@@ -10,6 +11,11 @@ export default function CTASection() {
       }
     }, 100);
   };
+  const phoneNumber = "5538999758535";
+  const mensagemWhatsApp = encodeURIComponent(
+    "Quero mais informações sobre o Bamboo Eventos",
+  );
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${mensagemWhatsApp}`;
 
   return (
     <section className="py-8 md:py-16 bg-gradient-to-br from-[#0d3d2f] to-[#1a5a47] text-white relative overflow-hidden">
@@ -43,7 +49,7 @@ export default function CTASection() {
                 Nossa Localização
               </button>
               <a
-                href="https://wa.me/5538999758535"
+                href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border-2 border-[#d4af37] text-[#d4af37] px-4 py-2 md:px-6 md:py-3 rounded-full font-semibold text-center transition-all hover:bg-[#d4af37] hover:text-[#0d3d2f] flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer text-xs md:text-base"

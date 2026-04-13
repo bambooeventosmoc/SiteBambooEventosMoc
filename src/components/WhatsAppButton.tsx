@@ -1,11 +1,14 @@
-import whatsappFloatIcon from "../../public/whatsapp-float-icon.png";
+import whatsappFloatIcon from "../public/whatsapp-float-icon.png";
 
 export default function WhatsAppButton() {
-  const whatsappUrl = `https://wa.me/5538999758535`;
-
+  const phoneNumber = "5538999758535";
+  const mensagemWhatsApp = encodeURIComponent(
+    "Quero mais informações sobre o Bamboo Eventos",
+  );
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${mensagemWhatsApp}`;
   return (
     <a
-      href={whatsappUrl}
+      href={whatsappLink}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Conversar no WhatsApp"
