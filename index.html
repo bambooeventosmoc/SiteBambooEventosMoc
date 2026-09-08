@@ -110,6 +110,21 @@
     />
   </head>
   <body>
+    <script>
+      (function (window, document, script) {
+        if (!window.tt) {
+          window.tt = window.tt || {};
+
+          c = document.getElementsByTagName("head")[0];
+          k = document.createElement("script");
+          k.async = 1;
+          k.src = script;
+          c.appendChild(k);
+        }
+
+        window.tt.accountCode = "8bc3ef4c-1229-429b-9736-b5f6eaf0936c";
+      })(window, document, "//s.tintim.app/static/core/tintim-1.0.js");
+    </script>
     <noscript
       ><img
         height="1"

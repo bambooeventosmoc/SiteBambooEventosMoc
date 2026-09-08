@@ -1,13 +1,10 @@
 import { useState } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { TINTIM_LINK } from "../../utils/whatsapp-links";
 
 export default function ContactPage() {
-  const phoneNumber = "5538999758535";
-  const mensagemWhatsApp = encodeURIComponent(
-    "Quero mais informações sobre o Bamboo Eventos",
-  );
-  const whatsappLink = `https://wa.me/${phoneNumber}?text=${mensagemWhatsApp}`;
+  const whatsappLink = TINTIM_LINK;
   const [formData, setFormData] = useState({
     nome: "",
     email: "",
