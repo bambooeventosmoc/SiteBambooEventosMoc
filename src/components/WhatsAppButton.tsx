@@ -1,11 +1,8 @@
 import whatsappFloatIcon from "../public/whatsapp-float-icon.png";
+import { TINTIM_LINK } from "../utils/whatsapp-links";
 
 export default function WhatsAppButton() {
-  const phoneNumber = "5538999758535";
-  const mensagemWhatsApp = encodeURIComponent(
-    "Quero mais informações sobre o Bamboo Eventos",
-  );
-  const whatsappLink = `https://wa.me/${phoneNumber}?text=${mensagemWhatsApp}`;
+  const whatsappLink = TINTIM_LINK;
   return (
     <a
       href={whatsappLink}
