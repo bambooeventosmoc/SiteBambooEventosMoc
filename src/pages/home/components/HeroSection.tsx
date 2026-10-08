@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { TINTIM_LINK } from "../../../utils/whatsapp-links";
+import { WHATSAPP_LINK } from "../../../utils/whatsapp-links";
 
 export default function HeroSection() {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ export default function HeroSection() {
     }, 100);
   };
 
-  const whatsappLink = TINTIM_LINK;
+  const whatsappLink = WHATSAPP_LINK;
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#0d3d2f] to-[#1a5a47]">
       {/* Background Image */}
