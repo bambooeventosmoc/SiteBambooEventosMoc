@@ -1,8 +1,8 @@
 import whatsappFloatIcon from "../public/whatsapp-float-icon.png";
-import { TINTIM_LINK } from "../utils/whatsapp-links";
+import { WHATSAPP_LINK } from "../utils/whatsapp-links";
 
 export default function WhatsAppButton() {
-  const whatsappLink = TINTIM_LINK;
+  const whatsappLink = WHATSAPP_LINK;
   return (
     <a
       href={whatsappLink}

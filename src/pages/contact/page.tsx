@@ -1,10 +1,10 @@
 import { useState } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import { TINTIM_LINK } from "../../utils/whatsapp-links";
+import { WHATSAPP_LINK } from "../../utils/whatsapp-links";
 
 export default function ContactPage() {
-  const whatsappLink = TINTIM_LINK;
+  const whatsappLink = WHATSAPP_LINK;
   const [formData, setFormData] = useState({
     nome: "",
     email: "",
